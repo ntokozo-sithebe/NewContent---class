@@ -19,6 +19,14 @@
 // console.log(lastName);
 //console.log(`My name is ${firstName} and last name is ${lastName}`);
 
+//myown example below
+// let pets = ['Dog', 'Cat', 'Mouse']
+// let[pet1, pet2, pet3] = pets
+
+// console.log(pets);
+// console.log(`i only like ${pet1}'s compared to ${pet2} and ${pet3}`);
+
+
 
 // let products = [ {
 //     id: 1,
@@ -33,7 +41,7 @@
 // ]
 
 // let [product1, product2] = products    // used square brackets because its an array
-// console.log(product1, product2);
+// console.log(product1);
 
 
 // OBJECT
@@ -52,8 +60,14 @@
 
 // REMEBER THAT DECONSTRUCTOR RETRIEVES
 
-//let [first, second, ...remaining] =[23, 5, 9, 11, 23, 33]   // takes the first, second element and then spread operator retrieves the remaining elements
+//let [first, second,  ...remaining] =[23, 5, 9, 11, 23, 33]   // takes the first, second element and then spread operator retrieves the remaining elements
 //console.log(first, second, remaining); 
+
+//MY OWN EXAMPLE
+
+// let[ ...remaining] = ['Ntokozo', 'Nonhlanhla', 'Sithebe']
+
+// console.log( ...remaining);
 
 // Other array methods that you should know:
 // =================================
@@ -62,13 +76,21 @@
 // some(), every() does return a boolean
 // console.log(numbers.some( n => n == 8));
 // find() : return value or undefined
-// let findResult = numbers.find( n=> n == 8)
-// console.log( findResult != undefined ? findResult : 'Value was not found' );
+
+// let numbers = [3, 1, 5, 9, 7]
+//  let findResult = numbers.find( n=> n == 22)
+//  console.log( findResult != undefined ? findResult : 'Value was not found' );
+
+// let firstNames = ['Ntokozo', 'Nonhlanhla']
+// let results = firstNames.includes('N')
+
+// console.log(results != inaccurate ? results : 'Nahh famo');
+
 
 // Count duplicate values: forEach(), reduce(), map() and filter()
 // Exception handling using try .. and catch
 // function division(fOp) {
-//     try{                                         // defines the code --insise the try
+//     try{                                         // defines the code --inside the try
 //         let result = fOp / sOp                   //firstOperan
 //         console.log(result);
 //     }catch(e) {                                 // e is for error--- handles the error -- what we will display to the user
@@ -134,24 +156,24 @@ When to use an exception handling:
 // )
 
 // Fetch API
-let cardContainer = document.querySelector('[data-cards]') 
-fetch('https://randomuser.me/api?results=50')
-.then(data=> data.json())
-.then(result=> {
-    let {results} = result 
-    results.forEach( people =>{
-        console.log(people);
-        cardContainer.innerHTML += 
-        `
-        <div class="card" style="width: 18rem;">
-            <img src="${people.picture.large}" class="card-img-top img-fluid" alt="${people.name.first}">
-            <div class="card-body">
-            <h5 class="card-title">${people.name.title}. ${people.name.first} ${people.name.last}</h5>
-            <p class="card-text">Age: ${people.registered.age}</p>
-        </div>
-        `
-    })
-})
+// let cardContainer = document.querySelector('[data-cards]') 
+// fetch('https://randomuser.me/api?results=50')
+// .then(data=> data.json())
+// .then(result=> {
+//     let {results} = result 
+//     results.forEach( people =>{
+//         console.log(people);
+//         cardContainer.innerHTML += 
+//         `
+//         <div class="card" style="width: 18rem;">
+//             <img src="${people.picture.large}" class="card-img-top img-fluid" alt="${people.name.first}">
+//             <div class="card-body">
+//             <h5 class="card-title">${people.name.title}. ${people.name.first} ${people.name.last}</h5>
+//             <p class="card-text">Age: ${people.registered.age}</p>
+//         </div>
+//         `
+//     })
+// })
 
 // Asynchronous function 
 // async function getData() {
