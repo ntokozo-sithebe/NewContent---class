@@ -137,10 +137,10 @@ When to use an exception handling:
 
 // Explain promise
 
- //let myPromise = new Promise((resolve, reject)=> {       // constructor function - takes a call back function when passing a function as an argument                              // the pending 
+//  let myPromise = new Promise((resolve, reject)=> {       // constructor function - takes a call back function when passing a function as an argument                              // the pending 
 //     let numb1 = 12 
 //      let numb2 = 2                                    
-// //     // For division
+//   //For division
 //     if(numb2 > 0 ) 
 //         resolve(`Result is: ${numb1 / numb2}`) 
 //     reject(`You can't divide ${numb1} by ${numb2}`)   // the "else"
@@ -148,12 +148,40 @@ When to use an exception handling:
 
 // myPromise.then(                                                  // retrieves the value of resolve -------- 
 //     (correct)=>{                                           
-//         console.log(correct);  // correct is like a placeholder 
+//         console.log(correct);  // correct is like a placeholder associated with resolve
 //     },                                                        
-//     (denied)=> {                      // displays the message 
+//     (denied)=> {                      // displays the message   --- denied is associated with reject
 //         console.log(denied);
 //     }
 // )
+
+
+// TASK JOEL GAVE US 
+// let aPromise = new Promise((resolve, reject)=>{
+//     let number1 = 3
+//     let number2 = "Ntokozo"
+    
+//     if(number1 | number2 == 'number')
+//     resolve(`result is  number ? ${number1 + number2} : number1 | number2`);
+
+//     reject(` ' ' is NOT a number`)
+    
+// })
+
+// aPromise.then(
+//     (correct)=>{
+//         console.log(correct);
+//     },
+//     (denied)=>{
+//         console.log(denied);
+//     }
+// )
+
+//addition = 7 + 3
+
+//console.log(number1 + number2 ? 10 : number1 | number2);
+
+
 
 // Fetch API
 // let cardContainer = document.querySelector('[data-cards]') 
@@ -201,4 +229,30 @@ When to use an exception handling:
 
 
 // On Thursday, students need to start working on the Todo List
+
+
+
+//DOING PROMISE AGAIN 
+
+// let myPromise = new Promise(args)
+
+// function args(resolve, reject ){
+//     let numb1 = +prompt('Enter only a number')                             // added a + ()
+//     if (typeof numb1 == 'number')                              
+//     resolve(`The entered number is ${numb1}`)
+//  reject(`Unfortunately ${numb1} is not a number`)
+// }
+
+// myPromise.then(
+//    completed=> console.log(completed),
+//    rejected => console.log((rejected)),
+// )
+
+
+// Tasks 
+
+
+
+
+
 
